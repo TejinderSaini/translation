@@ -1,0 +1,11 @@
+<ehcache xmlms:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ehcache.xsd">
+   <diskStore path="cache" />
+   <cache
+      name="messageCache"
+      maxElementsInMemory="10000"
+      eternal="false"
+      timeToIdleSeconds="0"
+      timeToLiveSeconds="10"
+      overflowToDisk="false"
+      memoryStoreEvictionPolicy="LFU" />      
+</ehcache>
