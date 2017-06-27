@@ -145,19 +145,25 @@ public class DatabaseMessageSource{
 			String[] keys = part.split("\\s+");
 			for(String key : keys){
 				if(!key.isEmpty()){
-					log.info("Translating Value.....key "+key);
-					status = this.getTranslatedMessage(key, org, locale);	
+					//log.info("Translating Value.....key "+key);
+					status = this.getTranslatedMessage(key, org, locale);
+					//log.info("Getting Value.....****************11="+status);
 					if(status != null){
-						if(status.getReturnStatus()==true)
+						//log.info("Getting Value.....****************12="+status);
+						if(status.getReturnStatus()==true){
+							//log.info("Getting Value.....****************13="+status);
 							statusList.add(status);
+						}
+						//log.info("Getting Value.....****************14="+status);
 						replacement = status.getValue();
-						log.info("Translating Value.....rep "+replacement);
-						if(!replacement.isEmpty()){
-							log.info("Translating Value.....sentenceBefore "+sentence);
+						//log.info("Translating Value.....rep "+replacement);
+						if(!replacement.isEmpty()){							
+							//log.info("Translating Value.....sentenceBefore "+sentence);
 							sentence = sentence.replaceFirst(key, replacement);
-							log.info("Translating Value.....sentenceAfter "+sentence);
+							//log.info("Translating Value.....sentenceAfter "+sentence);
 						}
 					}
+					//log.info("Getting Value.....****************15="+status);
 				}
 			}
 		}
@@ -197,7 +203,7 @@ public class DatabaseMessageSource{
 				return returnStatusForOrg(org, status);
 			}
 		}
-		return false;
+		return true;
 	}
 	
 	public Status getTranslatedMessage(String key, String org, String locale){
@@ -238,8 +244,10 @@ public class DatabaseMessageSource{
 		}
 		
 		if(status==null){
+			log.info("Getting Value.....****************9");
 			status = new Status(key, "-1", Constants.ALPHASEQ_KEYNOTFOUNDERROR, "");
 			status.setReturnStatus(returnStatusForStringOrg(org, status));
+			log.info("Getting Value.....****************10="+status);
 		}
 		
 		log.info("Getting Value.....20");

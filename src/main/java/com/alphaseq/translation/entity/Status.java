@@ -77,4 +77,9 @@ public class Status {
 	public void setReturnStatus(boolean returnStatus) {
 		this.returnStatus = returnStatus;
 	}
+	
+	@Override
+    public String toString(){
+		return "key="+this.key+" | code="+this.code+" | description="+this.description+" | returnStatus="+this.returnStatus;
+	}
 }
