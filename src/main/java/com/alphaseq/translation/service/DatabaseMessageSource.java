@@ -222,7 +222,7 @@ public class DatabaseMessageSource{
 						log.info("Getting Value.....6");
 						List<LocaleValue> locValList= o.getLocaleValueList();
 						for(LocaleValue lv : locValList){
-							log.info("Getting Value.....7");
+							log.info("Getting Value.....7"+lv.getLocale().getCode());
 							if(locale.equals(lv.getLocale().getCode())){
 								log.info("Getting Value.....8");
 								status = new Status(key, "0", Constants.ALPHASEQ_ALLOK, lv.getValue());

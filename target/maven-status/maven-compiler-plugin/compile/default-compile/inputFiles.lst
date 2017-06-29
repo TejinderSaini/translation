@@ -3,12 +3,9 @@ D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alp
 D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alphaseq\translation\entity\Entry.java
 D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alphaseq\translation\entity\Locale.java
 D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alphaseq\translation\db\OrganizationRepository.java
-D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alphaseq\translation\entity\Contact.java
 D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alphaseq\translation\controller\TranslationRestController.java
 D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alphaseq\translation\entity\TranslationResponse.java
-D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alphaseq\translation\controller\ContactRestController.java
 D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alphaseq\translation\entity\LocaleValue.java
-D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alphaseq\translation\db\ContactRepository.java
 D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alphaseq\translation\service\DatabaseMessageSource.java
 D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alphaseq\translation\exception\AlphaseqIllegalArgException.java
 D:\Personal\AlphaSeq\Work\Workspaces\IntDemoWS\translation\src\main\java\com\alphaseq\translation\entity\Status.java

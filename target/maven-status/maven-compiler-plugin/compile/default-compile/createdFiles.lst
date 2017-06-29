@@ -4,7 +4,6 @@ com\alphaseq\translation\entity\Organization.class
 com\alphaseq\translation\entity\Status.class
 com\alphaseq\translation\controller\TranslationRestController.class
 com\alphaseq\translation\TranslationModuleApplication.class
-com\alphaseq\translation\db\ContactRepository.class
 com\alphaseq\translation\entity\Locale.class
 com\alphaseq\translation\entity\Entry.class
 com\alphaseq\translation\db\OrganizationRepository.class
@@ -12,6 +11,4 @@ com\alphaseq\translation\exception\AlphaseqIllegalArgException.class
 com\alphaseq\translation\exception\RestExceptionProcessor.class
 com\alphaseq\translation\entity\LocaleValue.class
 com\alphaseq\translation\util\Constants.class
-com\alphaseq\translation\controller\ContactRestController.class
 com\alphaseq\translation\entity\TranslationResponse.class
-com\alphaseq\translation\entity\Contact.class

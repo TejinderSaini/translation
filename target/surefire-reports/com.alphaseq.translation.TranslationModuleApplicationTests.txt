@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.alphaseq.translation.TranslationModuleApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.957 sec - in com.alphaseq.translation.TranslationModuleApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.086 sec - in com.alphaseq.translation.TranslationModuleApplicationTests
