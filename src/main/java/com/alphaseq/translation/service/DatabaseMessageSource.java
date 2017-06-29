@@ -210,6 +210,10 @@ public class DatabaseMessageSource{
 		log.info("Getting Value.....1 key = "+key);
 		Status status = null;
 		List<Entry> entries = this.getTranslations();
+		boolean keyNotFound = false;
+		boolean orgNotFound = false;
+		boolean localeNotFound = false;
+		Organization organization = null;
 		log.info("Getting Value.....2");
 		for(Entry ent : entries){
 			log.info("Getting Value.....3 entKey = "+ent.getKey());
@@ -218,6 +222,7 @@ public class DatabaseMessageSource{
 				List<Organization> orgList= ent.getOrganizations();
 				for(Organization o : orgList){
 					log.info("Getting Value.....5");
+					organization = o;
 					if(org.equals(o.getName())){
 						log.info("Getting Value.....6");
 						List<LocaleValue> locValList= o.getLocaleValueList();
@@ -229,21 +234,29 @@ public class DatabaseMessageSource{
 								status.setReturnStatus(returnStatusForOrg(o, status));
 								return status;
 							}else{
-								status = new Status(key, "-2", Constants.ALPHASEQ_LOCALETRANSNOTFOUND, "");
-								status.setReturnStatus(returnStatusForOrg(o, status));
-								return status;
+								localeNotFound = true;
+								
 							}
 						}
 					}else{
-						status = new Status(key, "-3", Constants.ALPHASEQ_ORGNOTFOUND, "");
-						status.setReturnStatus(returnStatusForOrg(o, status));
-						return status;
+						orgNotFound = true;
+						
 					}
 				}
-			}			
+			}else{
+				keyNotFound = true;
+			}
 		}
 		
-		if(status==null){
+		if(localeNotFound){
+			status = new Status(key, "-2", Constants.ALPHASEQ_LOCALETRANSNOTFOUND, "");
+			status.setReturnStatus(returnStatusForOrg(organization, status));
+			return status;
+		}else if(orgNotFound){
+			status = new Status(key, "-3", Constants.ALPHASEQ_ORGNOTFOUND, "");
+			status.setReturnStatus(returnStatusForOrg(organization, status));
+			return status;
+		}else if(keyNotFound){
 			log.info("Getting Value.....****************9");
 			status = new Status(key, "-1", Constants.ALPHASEQ_KEYNOTFOUNDERROR, "");
 			status.setReturnStatus(returnStatusForStringOrg(org, status));
